@@ -81,6 +81,7 @@ class _WebMenuItemState extends State<WebMenuItem> {
           style: TextStyle(
             color: widget.isActive ? Colors.white : Colors.grey,
             fontWeight: widget.isActive ? FontWeight.w500 : FontWeight.normal,
+            fontFamily: 'CanelaDeck',
           ),
         ),
       ),

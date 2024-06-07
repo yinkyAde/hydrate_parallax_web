@@ -19,7 +19,7 @@ class ButtonWidget extends StatelessWidget {
       child: const Center(
         child: Text(
           "Shop Now",
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.white,fontFamily: 'CanelaDeck'),
         ),
       ),
     );

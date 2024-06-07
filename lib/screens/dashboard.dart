@@ -85,19 +85,21 @@ class _DashboardState extends State<Dashboard> {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
+                              fontFamily: 'CanelaDeck',
                               fontWeight: FontWeight.w500,
-                              fontSize: 28.0,
+                              fontSize: 34.0,
                             ),
                           ),
                         ),
                         const Positioned(
-                          top: 270.0,
+                          top: 275.0,
                           child: Text(
                             "Hydration Elevated: Sip Excellence with Every Drop",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
-                              fontWeight: FontWeight.w500,
+                              fontFamily: 'CanelaDeck',
+                              fontWeight: FontWeight.w200,
                               fontSize: 16.0,
                             ),
                           ),
