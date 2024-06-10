@@ -3,6 +3,7 @@ import 'package:hydrate_parallax_web/SOFT_BALL.dart';
 import 'package:hydrate_parallax_web/constants.dart';
 import 'package:hydrate_parallax_web/screens/topmenu.dart';
 
+import '../test_bg.dart';
 import '../widget/button.dart';
 import '../widget/soft_torch_effect.dart';
 
@@ -48,18 +49,19 @@ class _DashboardState extends State<Dashboard> {
                   child: Container(
                     height: MediaQuery.of(context).size.height,
                     color: lightGreenColorColor,
-                    child: const Stack(
+                    child: Stack(
                       children: [
-                        Positioned(
+                        const Positioned(
                           left: -120.0,
                           top: 100.0,
                           child: SoftTorchEffect(),
                         ),
-                        Positioned(
+                        const Positioned(
                           right: -100.0,
                           bottom: 100.0,
                           child: SoftTorchEffect(),
                         ),
+                        //const BottleBg(),
                       ],
                     ),
                   ),

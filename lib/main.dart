@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hydrate_parallax_web/screens/dashboard.dart';
+import 'package:hydrate_parallax_web/test_bg.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Dashboard(),
+      home: const BottleBg(),
     );
   }
 }
