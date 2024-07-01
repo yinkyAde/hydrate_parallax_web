@@ -18,116 +18,115 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(child: SingleChildScrollView(
-        child: Column(
-          children: [
-            TopMenu(),
-            Stack(
-              children: [
-                Container(
-                  height: 650,
-                  color: backgroundColor,
-                  child: const Stack(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              // Background containers and effects
+              Stack(
+                children: [
+                  Column(
                     children: [
-                      Positioned(
-                        left: -120.0,
-                        top: 100.0,
-                        child: SoftTorchEffect(),
+                      TopMenu(),
+                      // First Container with backgroundColor
+                      Container(
+                        height: MediaQuery.of(context).size.height * 0.7,
+                        color: backgroundColor,
+                        child: const Stack(
+                          children: [
+                            Positioned(
+                              left: -120.0,
+                              top: 100.0,
+                              child: SoftTorchEffect(),
+                            ),
+                            Positioned(
+                              right: -100.0,
+                              bottom: 100.0,
+                              child: SoftTorchEffect(),
+                            ),
+                          ],
+                        ),
                       ),
-                      Positioned(
-                        right: -100.0,
-                        bottom: 100.0,
-                        child: SoftTorchEffect(),
+                      // Second Container with lightGreenColorColor
+                      Container(
+                        height: MediaQuery.of(context).size.height * 0.7,
+                        color: lightGreenColorColor,
+                        child: const Stack(
+                          children: [
+                            BottleBg(),
+                            Positioned(
+                              left: 2000.0,
+                              top: 100.0,
+                              child: Placeholder(),
+                            ),
+                            Positioned(
+                              left: -120.0,
+                              top: 100.0,
+                              child: SoftTorchEffect(),
+                            ),
+                            Positioned(
+                              right: -100.0,
+                              bottom: 100.0,
+                              child: SoftTorchEffect(),
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
-                ),
-                Positioned(
-                  top: MediaQuery.of(context).size.height * 0.68,
-                  left: 0.0,
-                  right: 0.0,
-                  child: Container(
-                    height: MediaQuery.of(context).size.height,
-                    color: lightGreenColorColor,
-                    child: Stack(
-                      children: [
-                        const Positioned(
-                          left: -120.0,
-                          top: 100.0,
-                          child: SoftTorchEffect(),
-                        ),
-                        const Positioned(
-                          right: -100.0,
-                          bottom: 100.0,
-                          child: SoftTorchEffect(),
-                        ),
-                        //const BottleBg(),
-                      ],
-                    ),
-                  ),
-                ),
-                Container(
-                  height: MediaQuery.of(context).size.height,
-                  child: Center(
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        Positioned(
-                          top: 0.0,
-                          child: SizedBox(
-                            height: 200.0,
+                  // Image Container on top of the first two containers
+                  Positioned(
+                    top: 80.0,
+                    left: 0.0,
+                    right: 0.0,
+                    child: Center(
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 150.0,
                             width: 125.0,
                             child: Image.asset("assets/images/bottle_cap.png"),
                           ),
-                        ),
-                        const Positioned(
-                          top: 175.0,
-                          child: Text(
+                          const SizedBox(height: defaultPadding),
+                          const Text(
                             "Elevate Hydration, Inspire Living – \nPure Essence in Every Drop.",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
                               fontFamily: 'CanelaDeck',
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontSize: 34.0,
                             ),
                           ),
-                        ),
-                        const Positioned(
-                          top: 275.0,
-                          child: Text(
+                          const SizedBox(height: 8.0),
+                          const Text(
                             "Hydration Elevated: Sip Excellence with Every Drop",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
                               fontFamily: 'CanelaDeck',
-                              fontWeight: FontWeight.w200,
-                              fontSize: 16.0,
+                              fontWeight: FontWeight.normal,
+                              height: 2.0,
+                              fontSize: 14.0,
                             ),
                           ),
-                        ),
-                        const Positioned(
-                          top: 300.0,
-                          child: ButtonWidget(),
-                        ),
-                        Positioned(
-                          top: 395.0,
-                          //bottom: 100.0,
-                          child: SizedBox(
+                          const SizedBox(height: defaultPadding/2.0),
+                          const ButtonWidget(),
+                          const SizedBox(height: defaultPadding * 2.0),
+                          SizedBox(
                             height: 600.0,
                             child: Image.asset("assets/images/bottle_body.png"),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
-                ),
-
-              ],
-            ),
-          ],
+                ],
+              ),
+            ],
+          ),
         ),
-      )),
+      ),
     );
   }
 }

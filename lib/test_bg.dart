@@ -26,9 +26,9 @@ class BottleBg extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     IconAndText(iconName: "assets/icons/hand.svg", text:"Sustainable & bpa free",),
-                    SizedBox(height: defaultPadding * 4.0,),
+                    SizedBox(height: defaultPadding * 5.0,),
                     IconAndText(iconName: "assets/icons/droplet.svg", text:"Lightweight",),
-                    SizedBox(height: defaultPadding * 4.0,),
+                    SizedBox(height: defaultPadding * 5.0,),
                     IconAndText(iconName: "assets/icons/recycle.svg", text:"Liftime warranty",),
                   ],
                 ),
