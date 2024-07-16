@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hydrate_parallax_web/constants.dart';
 import 'package:hydrate_parallax_web/screens/topmenu.dart';
 
+import '../SOFT_BALL.dart';
 import '../test_bg.dart';
 import '../widget/button.dart';
 import '../widget/soft_torch_effect.dart';
@@ -46,12 +47,12 @@ class _DashboardState extends State<Dashboard> with SingleTickerProviderStateMix
       curve: const Interval(0.20, 0.50),
     );
 
-    // textAndButtonOffsetAnimation =
-    //     Tween<Offset>(begin: Offset.zero, end: const Offset(0.0, 1.5))
-    //         .animate(CurvedAnimation(
-    //         parent: animationController!,
-    //         curve: Curves.elasticIn
-    //     ));
+    textAndButtonOffsetAnimation =
+        Tween<Offset>(begin: Offset.zero, end: const Offset(0.0, 1.5))
+            .animate(CurvedAnimation(
+            parent: animationController!,
+            curve: Curves.elasticIn
+        ));
     // Start the animation and scroll when the animation completes
     animationController?.forward().whenComplete(() {
       scrollToBottom();
