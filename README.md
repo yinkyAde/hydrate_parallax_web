@@ -2,6 +2,9 @@
 
 A new Flutter project.
 
+![ScreenRecording2024-07-19at9 19 14am-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/b88d6f9a-2e23-45e5-94bd-bc0fb251b48f)
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
